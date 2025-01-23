@@ -12,3 +12,9 @@ ls:
 
 exec:
 	@docker container exec -it backend ash
+
+test:
+	@docker container exec -it backend ash -c "npm run test tests/integration"
+
+test-ci:
+	@npm run test:cov tests/
