@@ -1,0 +1,29 @@
+networks:
+  default:
+    name: hube
+    driver: bridge
+
+services:
+  backend:
+    image: deirofelippe/teste-tecnico-hube:latest
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: backend
+    command: sleep infinity
+    volumes:
+      - "./:/home/node/app"
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    # healthcheck:
+    #   test: ["CMD", "curl", "-f", "http://localhost:3000/healthz"]
+    #   interval: 10s
+    #   timeout: 5s
+    #   retries: 5
+    #   start_period: 30s
+    deploy:
+      resources:
+        limits:
+          cpus: "1"
+          memory: 512M

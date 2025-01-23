@@ -1,0 +1,31 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "= 21.7.3"
+  },
+  "scripts": {
+    "dev": "npx nodemon --config ./nodemon.json --exec 'npm run dev'",
+    "start": "NODE_ENV=production LOG_LEVEL=debug node build/src/server.js",
+    "test": "npx jest --runInBand -c ./jest.config.js",
+    "test:cov": "npm run test -- --coverage",
+    "build": "npx swc ./src -d ./build --config-file ./.swcrc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.9",
+    "prettier": "3.4.2",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

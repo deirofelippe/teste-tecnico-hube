@@ -1,0 +1,36 @@
+{
+  "name": "Existing Docker Compose (Extend)",
+  "dockerComposeFile": ["../docker-compose.yaml", "docker-compose.yml"],
+  "service": "backend",
+  "workspaceFolder": "/home/node/app",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "[javascript]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[javascriptreact]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "editor.formatOnSave": true,
+        "files.associations": {
+          ".prettierc": "javascript",
+          ".eslintrc": "javascript"
+        }
+      },
+      "extensions": [
+        "donjayamanne.git-extension-pack",
+        "humao.rest-client",
+        "ms-azuretools.vscode-docker",
+        "hediet.vscode-drawio",
+        "tomoki1207.pdf",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "jawandarajbir.react-vscode-extension-pack"
+      ]
+    }
+  },
+
+  "remoteUser": "node"
+}
