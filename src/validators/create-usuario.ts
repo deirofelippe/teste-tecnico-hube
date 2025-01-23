@@ -1,10 +1,13 @@
 import { Usuario, ValidatorErrors } from '@src/types';
+import { sanitize } from '@src/utils/sanitize.ts';
 
 export class CreateUsuarioValidator {
   public validate(usuario: Usuario): ValidatorErrors {
     const errors: ValidatorErrors['errors'] = [];
 
-    const telefone = usuario.telefone.replace(/[^0-9]/g, '');
+    usuario = sanitize(usuario);
+
+    let { dataNascimento, email, nome, telefone } = usuario;
 
     const tamanhosPermitidos = [11, 10, 9, 8];
 
@@ -14,9 +17,7 @@ export class CreateUsuarioValidator {
     }
 
     const padraoDeData = /^[\d]{2}\/[\d]{2}\/[\d]{4}$/;
-    const dataNascimentoNaoEstaCerto = !padraoDeData.test(
-      usuario.dataNascimento
-    );
+    const dataNascimentoNaoEstaCerto = !padraoDeData.test(dataNascimento);
     if (dataNascimentoNaoEstaCerto) {
       errors.push({
         message:
@@ -25,14 +26,13 @@ export class CreateUsuarioValidator {
     }
 
     const padraoDeEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-    const emailNaoEstaCerto = !padraoDeEmail.test(usuario.email);
+    const emailNaoEstaCerto = !padraoDeEmail.test(email);
     if (emailNaoEstaCerto) {
       errors.push({
         message: 'Email inválido.'
       });
     }
 
-    const nome = usuario.nome.trim();
     const nomeNaoEstaCerto = !(nome.length >= 3);
     if (nomeNaoEstaCerto) {
       errors.push({
