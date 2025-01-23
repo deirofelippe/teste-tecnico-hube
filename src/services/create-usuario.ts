@@ -1,5 +1,6 @@
 import { UsuarioRepository } from '@src/repositories/usuario';
 import { Result, Usuario } from '@src/types';
+import { sanitize } from '@src/utils/sanitize.ts';
 import { CreateUsuarioValidator } from '@src/validators/create-usuario';
 
 export class CreateUsuarioService {
@@ -21,11 +22,7 @@ export class CreateUsuarioService {
       return result;
     }
 
-    const telefone = usuario.telefone.replace(/[^0-9]/g, '');
-    usuario.telefone = telefone;
-
-    const nome = usuario.nome.trim();
-    usuario.nome = nome;
+    usuario = sanitize(usuario);
 
     this.usuarioRepository.create(usuario);
 
