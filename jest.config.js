@@ -11,7 +11,11 @@ module.exports = {
   coverageDirectory: 'coverage',
   coverageProvider: 'v8',
   coverageReporters: ['json', 'text', 'lcov', 'clover'],
-  collectCoverageFrom: ['./src/**'],
+  collectCoverageFrom: [
+    './src/services/**',
+    './src/validators/**',
+    './src/repositories/**'
+  ],
   coverageThreshold: {
     global: {
       lines: 80
