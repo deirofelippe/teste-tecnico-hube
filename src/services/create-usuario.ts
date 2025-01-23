@@ -24,6 +24,9 @@ export class CreateUsuarioService {
     const telefone = usuario.telefone.replace(/[^0-9]/g, '');
     usuario.telefone = telefone;
 
+    const nome = usuario.nome.trim();
+    usuario.nome = nome;
+
     this.usuarioRepository.create(usuario);
 
     return result;
