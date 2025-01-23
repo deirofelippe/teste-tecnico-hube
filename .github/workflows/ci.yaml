@@ -26,7 +26,7 @@ jobs:
         run: npm ci
 
       - name: Run test coverage
-        run: npm run test:cov
+        run: make test-ci
 
       - name: Check dependencies for vulnerabilities
         run: npm audit --audit-level=high
