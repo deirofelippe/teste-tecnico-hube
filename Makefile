@@ -18,3 +18,6 @@ test:
 
 test-ci:
 	@npm run test:cov tests/
+
+ci-cd:
+	@gh extension exec act --job ci
