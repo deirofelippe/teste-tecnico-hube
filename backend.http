@@ -1,0 +1,17 @@
+@url = http://localhost:3000
+
+GET {{url}}/healthz HTTP/1.1
+
+###
+GET {{url}}/usuarios/1737682676653 HTTP/1.1
+
+###
+POST {{url}}/usuarios HTTP/1.1
+Content-Type: application/json
+
+{
+    "nome": "Teste2",
+    "email": "teste@teste.com.br",
+    "telefone": "21912345678",
+    "dataNascimento": "18/11/1999"
+}

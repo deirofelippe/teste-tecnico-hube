@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json.schemastore.org/swcrc",
+  "jsc": {
+    "parser": {
+      "syntax": "typescript",
+      "tsx": false,
+      "dynamicImport": false,
+      // "privateMethod": false,
+      // "functionBind": false,
+      // "exportDefaultFrom": false,
+      // "exportNamespaceFrom": false,
+      "decorators": false
+      // "decoratorsBeforeExport": false,
+      // "topLevelAwait": false,
+      // "importMeta": false
+    },
+    "transform": {},
+    "target": "es5",
+    "loose": false,
+    "externalHelpers": false,
+    "keepClassNames": false
+    // "baseUrl": "./",
+    // "paths": {
+    //   "@src/*": ["./src/*"],
+    //   "@tests/*": ["./tests/*"]
+    // }
+  },
+  "module": {
+    "type": "commonjs",
+    // "resolveFully": true,
+
+    "strict": false,
+    "strictMode": false,
+    "noInterop": false,
+    "lazy": false
+  },
+  "minify": true,
+  "sourceMaps": true
+}
