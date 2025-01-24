@@ -30,7 +30,7 @@ export class FindUsuarioService {
       return result;
     }
 
-    result.data = { usuario: usuarioBuscado };
+    result.data = { usuario: { id, ...usuarioBuscado } };
 
     return result;
   }
