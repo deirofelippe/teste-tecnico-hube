@@ -1,8 +1,8 @@
-import { Database } from '@src/database/database.ts';
-import { UsuarioRepository } from '@src/repositories/usuario.ts';
-import { FindUsuarioService } from '@src/services/find-usuario.ts';
-import { Result, Usuario } from '@src/types';
-import { FindUsuarioValidator } from '@src/validators/find-usuario.ts';
+import { Database } from '../../../src/database/database';
+import { UsuarioRepository } from '../../../src/repositories/usuario';
+import { FindUsuarioService } from '../../../src/services/find-usuario';
+import { Result, Usuario } from '../../../src/types';
+import { FindUsuarioValidator } from '../../../src/validators/find-usuario';
 
 describe('FindUsuarioService', () => {
   let memoryDatabase: Database;
