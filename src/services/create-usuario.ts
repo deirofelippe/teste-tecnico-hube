@@ -24,7 +24,11 @@ export class CreateUsuarioService {
 
     usuario = sanitize(usuario);
 
-    this.usuarioRepository.create(usuario);
+    const usuarioCriado = this.usuarioRepository.create(usuario);
+
+    result.data = {
+      usuarioCriado
+    };
 
     return result;
   }
