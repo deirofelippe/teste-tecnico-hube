@@ -17,6 +17,14 @@ export interface Usuario {
   dataNascimento: string;
 }
 
+export interface UsuarioComID {
+  id: string;
+  nome: string;
+  email: string;
+  telefone: string;
+  dataNascimento: string;
+}
+
 export interface IDatabase {
   getOne(id: string): Usuario | undefined;
   put(data: Record<string, string>): void;
