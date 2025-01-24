@@ -18,16 +18,21 @@
     "target": "es5",
     "loose": false,
     "externalHelpers": false,
-    "keepClassNames": false,
-    "baseUrl": "./",
-    "paths": {
-      "@src/*": ["./src/*"],
-      "@tests/*": ["./tests/*"]
-    }
+    "keepClassNames": false
+    // "baseUrl": "./",
+    // "paths": {
+    //   "@src/*": ["./src/*"],
+    //   "@tests/*": ["./tests/*"]
+    // }
   },
   "module": {
     "type": "commonjs",
-    "resolveFully": true
+    // "resolveFully": true,
+
+    "strict": false,
+    "strictMode": false,
+    "noInterop": false,
+    "lazy": false
   },
   "minify": true,
   "sourceMaps": true

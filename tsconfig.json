@@ -9,11 +9,11 @@
     "strict": true,
     "skipLibCheck": true,
     "sourceMap": true,
-    "outDir": "./build",
-    "paths": {
-      "@src/*": ["./src/*"],
-      "@tests/*": ["./tests/*"]
-    }
+    "outDir": "./build"
+    // "paths": {
+    //   "@src/*": ["./src/*"],
+    //   "@tests/*": ["./tests/*"]
+    // }
   },
   "exclude": ["node_modules", "build"]
 }
