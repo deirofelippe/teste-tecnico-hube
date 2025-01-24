@@ -23,7 +23,10 @@ exec:
 	@docker container exec -it backend ash
 
 test:
-	@docker container exec -it backend ash -c "npm run test tests/integration"
+	@docker container exec -it backend ash -c "npm run test tests/"
+
+test-cov:
+	@docker container exec -it backend ash -c "npm run test:cov tests/"
 
 test-ci:
 	@npm run test:cov tests/
