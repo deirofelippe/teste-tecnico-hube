@@ -10,6 +10,15 @@ rm:
 ls:
 	@docker container ls -a
 
+logs:
+	@docker container logs -f backend
+
+start:
+	@npm run start
+	
+dev:
+	@npm run dev
+
 exec:
 	@docker container exec -it backend ash
 
