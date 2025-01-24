@@ -30,3 +30,6 @@ jobs:
 
       - name: Check dependencies for vulnerabilities
         run: npm audit --audit-level=high
+
+      - name: Run build
+        run: npm run build
