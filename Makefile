@@ -1,3 +1,6 @@
+init-and-start: up
+	@docker container exec backend ash -c "npm ci && npm start"
+
 up:
 	@docker compose up -d --build
 
@@ -12,9 +15,6 @@ ls:
 
 logs:
 	@docker container logs -f backend
-
-start:
-	@npm run start
 	
 dev:
 	@npm run dev
@@ -33,3 +33,9 @@ test-ci:
 
 ci-cd:
 	@gh extension exec act --job ci
+
+clear-cache:
+	@docker buildx prune -a -f
+
+docker-df:
+	@docker system df
