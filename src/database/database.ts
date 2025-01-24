@@ -1,4 +1,4 @@
-import { IDatabase, Usuario } from '@src/types';
+import { IDatabase, Usuario } from '../types';
 
 export class Database implements IDatabase {
   private static instance: Database;

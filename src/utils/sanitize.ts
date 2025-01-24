@@ -1,4 +1,4 @@
-import { Usuario } from '@src/types';
+import { Usuario } from '../types';
 
 export function sanitize(usuario: Usuario): Usuario {
   usuario.telefone = usuario.telefone.trim().replace(/[^0-9]/g, '');

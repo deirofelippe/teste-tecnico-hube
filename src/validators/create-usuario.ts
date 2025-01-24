@@ -1,5 +1,5 @@
-import { Usuario, ValidatorErrors } from '@src/types';
-import { sanitize } from '@src/utils/sanitize.ts';
+import { Usuario, ValidatorErrors } from '../types';
+import { sanitize } from '../utils/sanitize';
 
 export class CreateUsuarioValidator {
   public validate(usuario: Usuario): ValidatorErrors {

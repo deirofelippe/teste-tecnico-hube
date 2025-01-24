@@ -1,5 +1,5 @@
-import { Database } from '@src/database/database';
-import { IUsuarioRepository, Usuario } from '@src/types';
+import { Database } from '../database/database';
+import { IUsuarioRepository, Usuario, UsuarioComID } from '../types';
 
 export class UsuarioRepository implements IUsuarioRepository {
   constructor(private database: Database) {}

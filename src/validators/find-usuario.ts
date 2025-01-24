@@ -1,4 +1,4 @@
-import { ValidatorErrors } from '@src/types';
+import { ValidatorErrors } from '../types';
 
 export class FindUsuarioValidator {
   public validate(id: string): ValidatorErrors {

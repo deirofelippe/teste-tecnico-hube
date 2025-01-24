@@ -1,7 +1,7 @@
-import { UsuarioRepository } from '@src/repositories/usuario';
-import { Result, Usuario } from '@src/types';
-import { sanitize } from '@src/utils/sanitize.ts';
-import { CreateUsuarioValidator } from '@src/validators/create-usuario';
+import { UsuarioRepository } from '../repositories/usuario';
+import { Result, Usuario } from '../types';
+import { sanitize } from '../utils/sanitize';
+import { CreateUsuarioValidator } from '../validators/create-usuario';
 
 export class CreateUsuarioService {
   constructor(
