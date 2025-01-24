@@ -37,7 +37,7 @@ describe('CreateUsuarioService', () => {
 
     const usuarioBuscado = Database.getInstance().getOne(id.toString())!;
 
-    expect(Object.keys(result.data)).toHaveLength(0);
+    expect(result.data.usuarioCriado.id).toBe(id.toString());
     expect(result.errors).toHaveLength(0);
 
     expect(usuarioBuscado.nome).toBe(usuario.nome);
