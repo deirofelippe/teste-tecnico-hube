@@ -1,5 +1,5 @@
 import { Usuario } from '../../../src/types';
-import { CreateUsuarioValidator } from '../../../src/validators/create-usuario';
+import { CreateUsuarioValidator } from '../../../src/validators/create-usuario.validators';
 
 describe('CreateUsuarioValidator', () => {
   describe('Erros', () => {

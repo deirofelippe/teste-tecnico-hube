@@ -1,8 +1,8 @@
 import { Database } from '../../../src/database/database';
-import { UsuarioRepository } from '../../../src/repositories/usuario';
-import { CreateUsuarioService } from '../../../src/services/create-usuario';
+import { UsuarioRepository } from '../../../src/repositories/usuario.repositories';
+import { CreateUsuarioService } from '../../../src/services/create-usuario.services';
 import { Usuario } from '../../../src/types';
-import { CreateUsuarioValidator } from '../../../src/validators/create-usuario';
+import { CreateUsuarioValidator } from '../../../src/validators/create-usuario.validators';
 
 describe('CreateUsuarioService', () => {
   let memoryDatabase: Database;

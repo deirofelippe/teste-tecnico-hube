@@ -1,12 +1,12 @@
 import express from 'express';
 import { Database } from '../database/database';
-import { UsuarioRepository } from '../repositories/usuario';
-import { FindUsuarioValidator } from '../validators/find-usuario';
-import { FindUsuarioService } from '../services/find-usuario';
-import { FindUsuarioController } from '../controllers/find-usuario';
-import { CreateUsuarioValidator } from '../validators/create-usuario';
-import { CreateUsuarioService } from '../services/create-usuario';
-import { CreateUsuarioController } from '../controllers/create-usuario';
+import { UsuarioRepository } from '../repositories/usuario.repositories';
+import { FindUsuarioValidator } from '../validators/find-usuario.validators';
+import { FindUsuarioService } from '../services/find-usuario.services';
+import { FindUsuarioController } from '../controllers/find-usuario.controllers';
+import { CreateUsuarioValidator } from '../validators/create-usuario.validators';
+import { CreateUsuarioService } from '../services/create-usuario.services';
+import { CreateUsuarioController } from '../controllers/create-usuario.controllers';
 
 const router = express.Router();
 

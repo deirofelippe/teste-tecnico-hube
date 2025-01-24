@@ -1,7 +1,7 @@
-import { UsuarioRepository } from '../repositories/usuario';
+import { UsuarioRepository } from '../repositories/usuario.repositories';
 import { Result, Usuario } from '../types';
 import { sanitize } from '../utils/sanitize';
-import { CreateUsuarioValidator } from '../validators/create-usuario';
+import { CreateUsuarioValidator } from '../validators/create-usuario.validators';
 
 export class CreateUsuarioService {
   constructor(

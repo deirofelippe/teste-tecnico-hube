@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { CreateUsuarioService } from '../services/create-usuario';
+import { CreateUsuarioService } from '../services/create-usuario.services';
 import { Usuario } from '../types';
 
 export class CreateUsuarioController {

@@ -1,6 +1,6 @@
-import { UsuarioRepository } from '../repositories/usuario';
+import { UsuarioRepository } from '../repositories/usuario.repositories';
 import { Result } from '../types';
-import { FindUsuarioValidator } from '../validators/find-usuario';
+import { FindUsuarioValidator } from '../validators/find-usuario.validators';
 
 export class FindUsuarioService {
   constructor(

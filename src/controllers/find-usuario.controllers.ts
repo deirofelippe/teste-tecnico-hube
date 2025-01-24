@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { FindUsuarioService } from '../services/find-usuario';
+import { FindUsuarioService } from '../services/find-usuario.services';
 
 export class FindUsuarioController {
   constructor(private findUsuarioService: FindUsuarioService) {}
