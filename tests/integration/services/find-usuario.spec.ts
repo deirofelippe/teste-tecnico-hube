@@ -25,7 +25,7 @@ describe('FindUsuarioService', () => {
     memoryDatabase.clear();
   });
 
-  test('Deve buscar usuário do banco de dados', () => {
+  test('Deve buscar usuário no banco de dados', () => {
     const usuarioRepository = new UsuarioRepository(memoryDatabase);
     const findUsuarioValidator = new FindUsuarioValidator();
     const findUsuarioService = new FindUsuarioService(
@@ -36,6 +36,8 @@ describe('FindUsuarioService', () => {
     const result: Result = findUsuarioService.execute(id);
 
     expect(result.errors).toHaveLength(0);
+
+    expect(result.data.usuario.id).toBe(id);
     expect(result.data.usuario.nome).toBe(usuario.nome);
     expect(result.data.usuario.email).toBe(usuario.email);
     expect(result.data.usuario.telefone).toBe(usuario.telefone);
